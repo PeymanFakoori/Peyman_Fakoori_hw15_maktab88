@@ -37,6 +37,6 @@ router.post("/login", (req, res) => {
   findPassword = data.find((x) => x.password == password);
   if (!username || !password) return res.send("user not found");
 
-  res.render("");
+  res.render("profile");
 });
 module.exports = router;
