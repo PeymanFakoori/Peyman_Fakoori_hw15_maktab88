@@ -8,7 +8,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/home", (req, res) => {
-  res.render("home", { products });
+  res.render("home", products);
 });
 
 app.get("/about", (req, res) => {
