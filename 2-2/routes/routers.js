@@ -7,7 +7,8 @@ const path = require("path");
 router.get("/signUp", (req, res) => {
   res.render("signUp");
 });
-router.post("/signUp", async (res, req) => {
+router.post("/signUp", async (req, res) => {
+  console.log(req.body);
   if (!req.body.username || !req.body.password || !req.body.email)
     return res.send("data require");
   let emailCheck = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;

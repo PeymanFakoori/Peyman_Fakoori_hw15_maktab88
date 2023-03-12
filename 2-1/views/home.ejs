@@ -15,44 +15,51 @@
 <body>
     <%- include('./partials/navBar') %>
         <div class="d-flex justify-content-start px-3 w-100 flex-wrap">
-            <% for(let i=0; i<products.length; i++){ %>
+            <% for(let i=0; i<data.length; i++){ %>
 
                 <div class="card col-4 m-3" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <img class="card-img-top mb-3 align-self-center" src=<%=products[i].imageURL %>></img>
+                        <p class="card-title">Card title</p>
+                        <img class="card-img-top mb-3 align-self-center" src=<%=data[i].imageURL %>></img>
                         <img alt="">
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <h3 class="d-inline">name: </h3>
-                            <h5 class="d-inline text-primary">
-                                <%= products[i].name %>
-                            </h5>
+                            <p class="d-inline">name: </p>
+                            <p class="d-inline text-primary">
+                                <%= data[i].name %>
+                            </p>
                         </li>
                         <li class="list-group-item">
-                            <h3 class="d-inline">brand: </h3>
-                            <h5 class="d-inline text-primary">
-                                <%= products[i].brand %>
-                            </h5>
+                            <p class="d-inline">brand: </p>
+                            <p class="d-inline text-primary">
+                                <%= data[i].brand %>
+                            </p>
                         </li>
                         <li class="list-group-item">
-                            <h3 class="d-inline">gender: </h3>
-                            <h5 class="d-inline text-primary">
-                                <%= products[i].gender %>
-                            </h5>
+                            <p class="d-inline">gender: </p>
+                            <p class="d-inline text-primary">
+                                <%= data[i].gender %>
+                            </p>
                         </li>
                         <li class="list-group-item">
-                            <h3 class="d-inline">category: </h3>
-                            <h5 class="d-inline text-primary">
-                                <%= products[i].category %>
-                            </h5>
+                            <p class="d-inline">category: </p>
+                            <p class="d-inline text-primary">
+                                <%= data[i].category %>
+                            </p>
                         </li>
                         <li class="list-group-item">
-                            <h3 class="d-inline">price: </h3>
-                            <h5 class="d-inline text-primary">
-                                <%= products[i].price %>
-                            </h5>
+                            <p class="d-inline">price: </p>
+                            <p class="d-inline text-primary">
+                                <%= data[i].price %>
+                            </p>
+                            <br>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://localhost:8000/products/<%= data[i].id %>" class="btn btn-primary"
+                                id="button" type="submit">Perchance</a>
+                            <br>
+
                         </li>
 
                     </ul>
@@ -63,5 +70,6 @@
         </div>
         </div>
 </body>
+<script src="../public/click.js"></script>
 
 </html>

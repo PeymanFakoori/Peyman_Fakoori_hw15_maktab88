@@ -5,5 +5,11 @@
         "email": "andrew.j.tanenbaum@protonmail.com",
         "gender": "male",
         "isLoggedIn": false
+    },
+    {
+        "username": "payman",
+        "password": "Payman11322@",
+        "email": "p.fakoori@gmail.com",
+        "gender": "male"
     }
 ]
